@@ -1,0 +1,43 @@
+.tableName{
+
+color:#DEB887;
+font-family: 'Aclonica';font-size: 30px;
+
+}
+
+ #tdata, td{
+    
+	font-size:20px;
+  
+}
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+
+h1{
+	text-align:left;
+	font-family: 'Amita';font-size: 30px;
+	text-decoration: underline;
+	text-shadow: 3px 2px grey;
+	margin-left:20px;
+}
+
+body{
+	
+	background-image: url("../Spic/backgroundpic.jpg");
+	color:	#FAEBD7;
+	
+}
+
+.subtype{
+	font-size:10px;
+	font-style:italic;
+	color:red;
+
+}
+i{
+	color:#DEB887;
+	font-size:17px;
+}
+
+
+

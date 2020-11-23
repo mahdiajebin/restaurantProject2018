@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Reservation </title>
+<link rel="stylesheet" type="text/css" href="../css/styleRhome.css">
+<link rel="stylesheet" type="text/css" href="../css/menustyle.css">
+<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="../css/reservation.css">
+
+<!--top div and its content-->
+<div id="topdiv">
+<div class="logomargin">
+
+<a href="Rhome.html"><img src="../Spic/sugarlogo.png" width="120px" height="60px"> </a> <br>
+</div>
+<div class="cat" >
+<a class="box";  href="Rhome.html"     target="_self"> Home</a>
+
+<a class="box"; href="MenuPage.html " target="_self"> Menu</a>
+<a  class="box"; href="gallaryPage.html"     target="_self"> Gallary </a>
+<a class="box"; href="reservation.html"   target="_self" >Reservation</a>
+<a class="box"; href="contactPage.html"    target="_self">Contact</a>
+
+</div>
+<!--end -->
+
+</div>
+
+ <script>
+
+ /* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+
+ </script>
+
+<script>
+
+function Order(YourName, PhoneNumber)
+{
+   this.YourName = YourName;
+   this.PhoneNumber = PhoneNumber;
+}
+
+
+
+
+
+
+function ValidateForm(YourName,PhoneNumber,Email)
+{
+
+	var letters = /^[A-Za-z\s]+$/;
+	if(YourName.value.match(letters))
+		{
+		  alert('Your name accepted');
+
+
+			  var phoneno = /^([0-9]{10})$/;
+			  if(PhoneNumber.value.match(phoneno))
+					{
+				  alert('Your Number accepted');
+					}
+				  else
+					{
+					alert("Not a valid Phone number! 10 Numeric required");
+					return false;  }
+
+
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(Email.value.match(mailformat))
+{
+alert("Your Email Accepted");
+}
+else
+{
+alert("You have entered an invalid email address!");
+return false;
+}
+
+
+
+
+		}
+		else
+		{
+		alert('Please input alphabet characters only');
+		return false;
+		}
+
+
+
+
+}
+
+</script>
+
+
+
+
+
+</head>
+
+<body>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<header>
+    <h1 style="text-align:center;"> Reservation </h1>
+</header>
+<br>
+<br>
+
+
+<form action="http://www.WebsiteDevelopmentBook.com/FormEcho.php" method="post" onsubmit = "return ValidateForm(YourName,PhoneNumber)"  > <!-- to save information or send it to another file-->
+
+<table border="2" width="60%" height="30px" style="text-align:center; margin-left:20%;color:black;background-color:white;" cellpadding="10px">
+
+<tr><th style="color:#cc6600;  ">Make Reservation</th>     </tr>
+
+<tr >  <th>
+<table border="1" cellpadding="10px" style="margin-left:10%;">
+<tr><th>    <table cellpadding="10px;" > NUMBER OF PEOPLE:<select name="Number of people">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+
+
+</table>
+
+</select>      </th>
+
+<!-- End -->
+
+
+<th> <table cellpadding="10px" >   <tr> <th> MM:<select name="Month">
+<option>January</option>
+<option>February</option>
+<option>March </option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option>
+
+
+</select> </th>    <th>
+ DD:<select name="Day">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+
+</select> </th>   <th>
+ YY:<select name="year">
+
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+<option>32</option>
+<option>33</option>
+<option>34</option>
+<option>35</option>
+<option>36</option>
+<option>37</option>
+<option>38</option>
+<option>39</option>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+<option>44</option>
+<option>45</option>
+<option>46</option>
+<option>47</option>
+<option>48</option>
+<option>49</option>
+<option>50</option>
+
+
+</select></th>  </tr>      </table> </th>
+
+
+<!-- End -->
+
+
+<th>    Time: <select name="Time">
+<option>12:00</option>
+<option>12:30</option>
+<option>1:00</option>
+<option>1:30</option>
+<option>2:00</option>
+<option>2:30</option>
+<option>3:00</option>
+<option>3:40</option>
+<option>4:00</option>
+<option>4:30</option>
+<option>5:00</option>
+<option>5:30</option>
+<option>6:00</option>
+<option>6:30</option>
+<option>7:00</option>
+<option>7:30</option>
+<option>8:00</option>
+<option>8:30</option>
+<option>9:00</option>
+<option>9:30</option>
+<option>10:00</option>
+<option>10:30</option>
+<option>11:00</option>
+<option>11:30</option>
+
+
+
+
+</select>     <table cellpadding="10px">
+<tr>
+AM<input type="radio" name="am_or_pm" value="AM"/>
+PM<input type="radio" name="am_or_pm" value="PM"/>
+</tr>
+</table>      </th>                </tr>
+
+
+</table>
+                </th>       </tr>  <!-- End -->
+
+</table>
+<br>
+<br>
+
+<table border="2" width="60%" height="30px" style="text-align:center; margin-left:20%;color:black;background-color:white;" cellpadding="10px">
+
+<tr> <th>
+Would You Like to pre-order Shisha?
+
+
+Yes <input type="checkbox" name="Order_shisha?"/>
+No <input type="checkbox" name="Order_shisha?"/>
+
+<!-- End -->
+
+</th>
+</tr>
+
+<tr>
+<th>
+To see Shisha menu please: <br>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span style="color:red;" onclick="openNav()"> CLICK HERE</span>
+
+
+</th>
+</tr>
+
+
+<tr>
+
+<th>
+If yes please write in the following textbox:
+<br>
+Text Area: <textarea rows="10" cols="50"> </textarea>
+<br>
+
+</th>
+
+
+</tr>
+<tr>
+<th>
+
+
+Your Name :&nbsp; &nbsp; &nbsp; <input type = "text" name = "YourName" /><br/><br/>
+Phone Number: <input type = "text" name = "PhoneNumber" /><br/><br/>
+Your Email:&nbsp; &nbsp; &nbsp;&nbsp; <input type ="text" name="Email" /> <br/>
+
+
+
+
+
+
+</th>
+
+
+</tr>
+
+<tr>
+
+<th>
+
+<input type="submit" value="Click to Submit"/>
+
+</th>
+
+<tr>
+
+
+
+
+</table>
+
+
+
+</form>
+
+
+
+<br/>
+<br/>
+
+
+
+
+
+
+                                                                  <!-- END of form code -->
+
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+
+
+<div class="menu"> MENU </div>
+<br>
+<br>
+<br>
+ <div id="shisha" id="clickhere" class="tabcontent">
+
+
+
+  <button class="dropdown-btn"> Comfort Food
+    <i class="fa fa-caret-down"> </i>
+  </button>
+
+  <div class="dropdown-container">
+
+    <table style="width:100%; text-align:center;" class="fixed"  cellspacing="20"  >
+
+
+     <tr class="tableName">
+
+
+
+     </tr>
+
+     <div id="tdata"  >
+     <tr>
+
+       <td >CHICKEN WINGS  &nbsp; 7
+     <br><br> <i>Honey, BBQ, Spicy, Buffalo, Ranch </i> </br> </td>
+
+
+     </tr>
+     <tr>
+       <td >CHICKEN FINGERS &nbsp; 7 <br><br>  <i>Honey, BBQ, Spicy, Buffalo,threefold Sauce</i> </br> </td>
+
+     </tr>
+     <tr>
+       <td>CALAMARI &nbsp; 8<br><br> <i> Chipotle Aioli, Horseradish cocktail</i> <br> </td>
+
+     </tr>
+
+     <tr>
+       <td>BUTTERFLY SHRIMP &nbsp; 8<br> <br> <i> Mango Spicy Mayo</i> <br>  </td>
+
+     </tr>
+     <tr>
+       <td>MOZZARELLA STICKS &nbsp; 5 <br> <br> <i> Marinara Sauce</i> <br> </td>
+
+     </tr>
+     <tr>
+       <td>JALAPENO POPPERS  &nbsp; 5<br> <br> <i> Marinara Sauce</i> <br> </td>
+
+     </tr>
+     <tr>
+       <td>TATER TOTS &nbsp; 5<br><br>  <i > Sriracha ketchup & chedder cheese Dip</i> <br> </td>
+
+     </tr>
+     <tr>
+       <td>CAJUN WAFFLE FRIES&nbsp; 5 <br><br>  <i> Sriracha Ketchup</i> <br> </td>
+
+
+
+     </tr>
+
+
+     </div>
+
+   </table>
+
+  </div>
+
+
+
+  <button class="dropdown-btn">Dessert
+    <i class="fa fa-caret-down"> </i>
+  </button>
+
+  <div class="dropdown-container">
+
+    <table style="width:100%; text-align:center;" class="fixed"  cellspacing="20"  >
+
+
+
+       <tr class="tableName">
+
+
+       </tr>
+
+       <div id="tdata"  >
+       <tr>
+
+         <td style="text-decoration: underline; text-align:center;">FREAK SHAKES &nbsp;&nbsp; 13 </td>
+
+
+       </tr>
+       <tr>
+        <td>S'MORES <br> <br> <i> Vanilla ice cream, Dark Chocolate, graham crackers, toasted marshmallows, plus more</i> <br> </td>
+
+       </tr>
+       <tr>
+        <td>DEATH BY CHOCOLATE <br> <br> <i> chocolate lovers dream shake with chocolate cake, cookies, and chocolate on top of chocolate. </i> <br></td>
+
+       </tr>
+
+       <tr>
+        <td>STRAWBERRY ICE CREAM N CAKE <br> <br> <i> Strawberry ice cream, vanilla cake, strawberries, sauce plus more</i> <br></td>
+
+       </tr>
+       <tr>
+          <td>SWEET N SALTY<br> <br> <i> caramel pretzel ice cream, chocolate dipped pretzel, chocolate penut butter crunch candy.</i> <br></td>
+
+       </tr>
+       <tr>
+          <td style="text-decoration: underline; text-align:center;">BELGIAN WAFFLES OR CREPES &nbsp;&nbsp; 11</td>
+
+       </tr>
+       <tr>
+          <td>STRAWBERRY SHORTCAKE <br> <br> <i> Homemade strawberry topping served with homemade whipeped cream, chocolate, sauce & scoop of strawberry cream</i> <br></td>
+
+       </tr>
+       <tr>
+          <td>BANANA FOSTER<br> <br> <i> Caramelized Bananas, vanilla ice cream, homemade caramel sauce garnished with fresh bananas.</i> <br></td>
+
+
+     </tr>
+       <tr>
+       <td> BLUEBERRY LEMON<br> <br> <i> blueberry lemon compote, berry sauce, homemade wipped cream, ginger cookie crumble and fresh barries.</i> <br></td>
+
+
+     </tr>
+
+      <tr>
+
+      <td>COOKIES N CREAM<br> <br> <i> Chocolate cream cookie crumble, chocolate sauce, white chocolate, cherries, and homemade whipeped cream.</i> <br></td>
+
+      </tr>
+       </div>
+
+     </table>
+
+  </div>
+
+
+    <button class="dropdown-btn">Shisha
+      <i class="fa fa-caret-down"> </i>
+    </button>
+
+    <div class="dropdown-container">
+
+      <table style="width:100%; text-align:center;" class="fixed"  cellspacing="20"  >
+
+
+      <tr class="tableName">
+
+
+
+      </tr>
+
+      <div id="tdata"  >
+      <tr>
+
+        <td Style="text-decoration: underline;text-align:center;">BASIC &nbsp;&nbsp; 16 </td>
+    	</tr>
+    	<tr style="text-align:center;">
+    	<td>
+    	<br><br> KIWI<br> MINT<br> MANGO<br>ORANGE<br>GUAVA<br>PEACH<br>GRAPE<br>STRAWBERRY<br>WATER MELON<br>DOUBLE APPLE<br> </br> </td>
+
+
+      </tr>
+
+        <tr>
+
+        <td style="text-decoration: underline; text-align:center;">STANDARD &nbsp;&nbsp; 20 </td>
+    	</tr>
+
+    <tr style="text-align:center;">
+    	<td>
+    	<br><br> BLUEMIST<br>MOJITO<br>GUM MINT<br>BUBBLE GUM<br>STRAWBERRY MARGARITA<br>SEX ON THE BEACH<br><br>SKITTLES<br>PAAN MASALA<br>WHITE MINT<br> </br> </td>
+
+
+      </tr>
+
+   <tr>
+
+      <td Style="text-decoration: underline;text-align:center;">ELITE &nbsp;&nbsp; 16 </td>
+  	</tr>
+  	<tr style="text-align:center;">
+  	<td>
+  	<br><br> SPICY CHAI <br>WHITE CHAI<br>MANGO LASSI<br>MARGARITA FREEZE </br> FRESH VANILLA<br>WHITE GUMMY BEAR<br>GRAPE
+  	<br>PINK LADY</br>LEMON DROP<br>PASSION FRUIT<br>WHITE PEACH</br>BLACK BERRY<br>ICE CREAM BERRY VANILLA</br>
+  	</br> </td>
+
+
+    </tr>
+
+
+
+   <tr>
+
+      <td Style="text-decoration: underline;text-align:center;">MIXED FLAVORS  </td>
+  	</tr>
+  	<tr style="text-align:center;">
+  	<td>
+  	<br> BASIC 20|| STANDARD& ELITE 25||<br></td>
+
+
+    </tr>
+
+   <tr>
+
+      <td Style="text-decoration: underline;text-align:center;">FRESH FRUIT &nbsp;&nbsp; 25 </td>
+  	</tr>
+  	<tr style="text-align:center;">
+  	<td>
+  	<br> PINEAPPLE|| ORANGE|| GRAPE||<br></td>
+
+
+    </tr>
+
+   <tr>
+
+      <td Style="text-decoration: underline;text-align:center;">ADDS ON &nbsp;&nbsp; 25 </td>
+  	</tr>
+  	<tr style="text-align:center;">
+  	<td>
+  	<br> ICE/ MILK /JUICE BASE  2<br>
+  	ICE TOP/ICE PIPE  5<br>
+  	</td>
+
+
+    </tr>
+
+
+    </div>
+
+  </table>
+
+
+    </div>
+
+
+      <button class="dropdown-btn" >Handcrafted Mocktail
+        <i class="fa fa-caret-down"> </i>
+      </button>
+
+      <div class="dropdown-container">
+
+        <table style="width:100%; text-align:center;" class="fixed"  cellspacing="20"  >
+
+
+        <tr class="tableName">
+
+
+
+
+        </tr>
+
+        <div id="tdata"  >
+        <tr>
+
+          <td Style="text-align:center;">STARGAZER &nbsp;&nbsp; 6 </td>
+      	</tr>
+
+      	<tr>
+
+          <td Style="text-align:center;">JALAPENO MARGARITA &nbsp;&nbsp; 6 </td>
+      	</tr>
+
+      	<tr>
+
+          <td Style="text-align:center;">HIBISCUS PEAR MARGARITA &nbsp;&nbsp; 6 </td>
+      	</tr>
+
+      	<tr>
+
+          <td Style="text-align:center;">MOJITO &nbsp;&nbsp; 6 </td>
+      	</tr>
+
+      <tr>
+
+          <td Style="text-align:center;">MANGO MOJITO&nbsp;&nbsp; 6 </td>
+      	</tr>
+
+       <tr>
+
+          <td Style="text-align:center;">WOODHEAVEN MULE &nbsp;&nbsp; 6 </td>
+      	</tr>
+        </div>
+
+      </table>
+
+      </div>
+
+
+
+      <button class="dropdown-btn">Beverage
+        <i class="fa fa-caret-down"> </i>
+      </button>
+
+      <div class="dropdown-container">
+
+
+        <table style="width:100%; text-align:center;" class="fixed"  cellspacing="20"  >
+
+
+          <tr class="tableName">
+
+
+
+          </tr>
+
+          <div id="tdata"  >
+          <tr>
+
+            <td Style="text-align:center;">SOFT DRINKS &nbsp;&nbsp; 2 </td>
+
+        		<tr style="text-align:center;">
+        	<td>
+        	 Coke, Sprite, Gingerale</td>
+
+          </tr>
+
+        	</tr>
+
+
+
+        	<tr>
+
+            <td Style="text-align:center;">WATER &nbsp;&nbsp; 3 </td>
+        	</tr>
+
+        	<tr>
+
+            <td Style="text-align:center;">SPARKLING WATER&nbsp;&nbsp; 3 </td>
+        	</tr>
+
+        	<tr>
+
+            <td Style="text-align:center;">MARTINELLI'S SPARKLING APPLE CIDER&nbsp;&nbsp; 20</td>
+        	</tr>
+
+          </div>
+
+        </table>
+
+
+      </div>
+
+</div>
+
+</div>
+
+
+
+  </div>
+
+
+
+  <script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+
+
+</body>
+
+
+
+
+</html>
